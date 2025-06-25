@@ -1,3 +1,11 @@
+/* 1. Import a clean, readable font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/* 2. Apply globally */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
 /* wrap sidebar + content */
 .wrapper {
   display: flex;
@@ -13,7 +21,7 @@
   box-sizing: border-box;
 }
 
-/* align header */
+/* sidebar heading */
 .sidebar h2 {
   margin: 0 0 1em;
   padding: 0;
@@ -31,19 +39,19 @@
   margin-bottom: 1em;
 }
 
-/* link styling */
+/* 3. Link styling: blu Savoia, no underline */
 .sidebar ul li a {
   display: block;
-  color: cyan;             /* all links in cyan */
-  text-decoration: none;   /* remove underline */
+  color: #005AA7;        /* blu Savoia */
+  text-decoration: none;
 }
 
-/* highlight the current page */
+/* bold the active page link */
 .sidebar ul li.active > a {
-  font-weight: bold;       /* bold active link */
+  font-weight: 700;
 }
 
-/* main content grows to fill */
+/* main content area */
 .main-content {
   flex: 1;
   padding: 2em;
