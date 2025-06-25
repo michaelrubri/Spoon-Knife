@@ -1,0 +1,26 @@
+/* wrap sidebar + content */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* fixed-width sidebar */
+.sidebar {
+  width: 200px;
+  padding: 1em;
+  background: #f4f4f4;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* highlight current page */
+.sidebar ul li.active > a {
+  font-weight: bold;
+  color: #007acc;
+}
+
+/* main content grows to fill */
+.main-content {
+  flex: 1;
+  padding: 2em;
+}
