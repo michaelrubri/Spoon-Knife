@@ -7,7 +7,7 @@
 /* fixed-width sidebar */
 .sidebar {
   width: 200px;
-  padding: 1em;           /* this padding now defines the left inset */
+  padding: 1em;           /* this padding defines the left inset */
   background: #f4f4f4;
   border-right: 1px solid #ddd;
   box-sizing: border-box;
@@ -16,7 +16,7 @@
 /* align header */
 .sidebar h2 {
   margin: 0 0 1em;        /* no left margin, 1em below */
-  padding: 0;             /* no extra padding */
+  padding: 0;
 }
 
 /* reset list defaults so items line up */
@@ -28,23 +28,10 @@
 
 /* add vertical gap */
 .sidebar ul li {
-  margin-bottom: 1em;     /* space between links */
+  margin-bottom: 1em;     /* space between each item */
 }
 
-/* make links block-level so margin/padding behave predictably */
-.sidebar ul li a {
-  display: block;
-  margin: 0;
-  padding: 0;
-  color: inherit;
-  text-decoration: none;
-}
-
-/* highlight current page */
-.sidebar ul li.active > a {
-  font-weight: bold;
-  color: #007acc;
-}
+/* no styles here for the <a>—they’ll use default browser styling */
 
 /* main content grows to fill */
 .main-content {
