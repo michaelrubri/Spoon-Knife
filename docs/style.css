@@ -7,10 +7,37 @@
 /* fixed-width sidebar */
 .sidebar {
   width: 200px;
-  padding: 1em;
+  padding: 1em;           /* this padding now defines the left inset */
   background: #f4f4f4;
   border-right: 1px solid #ddd;
   box-sizing: border-box;
+}
+
+/* align header */
+.sidebar h2 {
+  margin: 0 0 1em;        /* no left margin, 1em below */
+  padding: 0;             /* no extra padding */
+}
+
+/* reset list defaults so items line up */
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* add vertical gap */
+.sidebar ul li {
+  margin-bottom: 1em;     /* space between links */
+}
+
+/* make links block-level so margin/padding behave predictably */
+.sidebar ul li a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* highlight current page */

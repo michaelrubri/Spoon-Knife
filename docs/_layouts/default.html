@@ -8,7 +8,7 @@
 <body>
 <div class="wrapper">
     <nav class="sidebar">
-        <h2>Contents</h2>
+        <h2>Documents</h2>
         <ul>
             {% assign toc_pages = site.pages | where_exp:"p","p.path contains '.md'" %}
             {% for p in toc_pages %}
