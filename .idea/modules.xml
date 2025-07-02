@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Spoon-Knife.iml" filepath="$PROJECT_DIR$/.idea/Spoon-Knife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Spoon-Knife.iml" filepath="$PROJECT_DIR$/.idea/modules/Spoon-Knife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Spoon-Knife.Spoon-Knife-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Spoon-Knife.Spoon-Knife-build.iml" />
     </modules>
   </component>
 </project>
