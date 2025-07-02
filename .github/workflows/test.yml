@@ -26,7 +26,7 @@ jobs:
           cache: sbt
 
       - name: Setup Scala and SBT
-        uses: olafur/setup-scala@v17
+        uses: olafurpg/setup-scala@v11
         with:
           java-version: ${{ matrix.java }}
           sbt-version: '1.9.6'
