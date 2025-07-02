@@ -1,4 +1,4 @@
-name: Test Pull Request DevelopN to Main
+name: Test Pull Request Develop to Main
 
 on:
   pull_request:
@@ -18,11 +18,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Java & sbt via Coursier
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java }}
+
+      - name: Install sbt via Coursier
         uses: coursier/setup-action@v1
         with:
           jvm: "temurin:${{ matrix.java }}"
-          apps: "sbtn"
+          apps: "sbt"
 
       - name: Cache sbt dependencies
         uses: actions/cache@v3
@@ -35,4 +41,4 @@ jobs:
           key: ${{ runner.os }}-sbt-${{ hashFiles('**/build.sbt') }}
 
       - name: Run sbt tests
-        run: sbtn clean test
+        run: sbt clean test
