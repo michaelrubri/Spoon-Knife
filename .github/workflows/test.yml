@@ -25,6 +25,22 @@ jobs:
           java-version: ${{ matrix.java }}
           cache: sbt
 
+      - name: Install sbt (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
+          curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x99E82A75642AC823" | sudo apt-key add -
+          sudo apt-get update
+          sudo apt-get install -y sbt
+
+          - name: Install sbt (Windows)
+            if: runner.os == 'Windows'
+            run: choco install sbt -y
+
+          - name: Install sbt (macOS)
+            if: runner.os == 'macOS'
+            run: brew install sbt
+          
       - name: SBT Dependency Cache
         uses: actions/cache@v3
         with:
